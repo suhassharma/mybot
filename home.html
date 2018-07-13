@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+      body {
+          background: rgb(131, 129, 129);
+          overflow-y: auto;
+		height:4000;
+          background-image: url('img.jpg');
+          background-repeat: no-repeat;
+         
+    background-size: cover;
+      }
+      .button5 {border-radius: 50%;}
+      .background-content {
+          max-width: 570px;
+          margin: auto;
+          background: rgb(241, 241, 237);
+          padding: 10px;
+      }
+      .scrollable { 
+            height: 1800px; /* or any value */
+             overflow-y: auto;
+             position: absolute;
+    left:375px;
+                    }
+        .lol
+        {
+          position: absolute;
+    right:375px;
+    
+        }            
+                    body::-webkit-scrollbar {
+                      width: 1em;
+                  }
+                   
+                  body::-webkit-scrollbar-track {
+                      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                  }
+                   
+                  body::-webkit-scrollbar-thumb {
+                    background-color: darkgrey;
+                    outline: 1px solid slategrey;
+                  }
+       .w3-bar-block .w3-bar-item {padding:20px}
+       body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+      </style>
+</head>
+<body class="container-fluid" >
+
+
+  
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-large w3-animate-left" style="background: rgb(141, 132, 126);display:none;z-index:2;width:30%;min-width:100px;color:rgb(239, 235, 243)" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">lolClose Menu</a>
+    <a href="#case1" onclick="mainFunc(event, 'Case1'),w3_close()" class="w3-bar-item w3-button">Engine #1  exhaust temp is abnormal at cruse altitude</a>
+    <a href="#case2" onclick="mainFunc(event, 'Case2'),w3_close()" class="w3-bar-item w3-button">Rear location #2 boiler is out of service</a>
+    <a href="#case3" onclick="mainFunc(event, 'Case3'),w3_close()" class="w3-bar-item w3-button">Seat # 24B is not reclining</a>
+    <a href="#case4" onclick="mainFunc(event, 'Case4'),w3_close()" class="w3-bar-item w3-button">#1 Landing Gear hyd oil leakage</a>
+  </nav>
+
+
+
+    <!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-large" style="max-width:-5px;margin:auto">
+      <div class="w3-button w3-padding w3-left" onclick="w3_open()">HOME ☰</div>
+</div>
+      </div>
+      
+
+     
+     <!-- <div class="w3-center w3-padding-16">Case1</div>
+      <div class="w3-center w3-padding-16">Case2</div>
+      <div class="w3-center w3-padding-16">Case3</div>
+      <div class="w3-center w3-padding-16">Case4</div>
+
+    </div>
+  </div>-->
+  <!-- !PAGE CONTENT! 
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  </div>-->
+
+    
+  <!--<h4 style ="color:rgb(35, 33, 36)">
+    Engine #1  exhaust temp is abnormal at cruse altitude<br/>
+  Please select from the options</h4> -->
+<div class="scrollable">
+  <div id="Case1" class=" tabcontent1 text-right" align="right">
+    <form  name="case1form form-inline" id="case1form" align="right">
+        <div class="card-deck text-right"align="right">
+            <div class="card bg-secondary" align="right">
+              <div class="card-body text-center">
+        <label class="checkbox bg-secondary">
+          <input type="checkbox" name="gearBox" value ="gear_box">Check gearbox  MCDU for metal parts
+        </label>
+        <label class="checkbox bg-secondary">
+          <input type="checkbox" name="exhaustNozzle" value="exhaust_nozzle">Check exhaust nozzle for burn marks
+        </label>
+        <label class="checkbox bg-secondary">
+          <input type="checkbox" name="fuelLeak" value="fuel_leak"> Check fuel leak in the combustion chamber
+        </label>
+        
+            <button type="button" class=" button5 btn btn-success btn-sm" value="ok" onclick="mycase1Func()">Ok</button>
+        
+          
+              <button type="button" class="button5 btn btn-danger btn-sm "  value="exit">Exit
+            </button>
+            </div>
+            </div>
+            </div>
+      </form>
+      </div>
+    
+    <div class="tabcontent1" id="metalParts">
+        <div class="card-deck">
+            <div class="card bg-secondary">
+              <div class="card-body text-center">
+        <h4 style ="color:rgb(23, 22, 24)">Did you find any metal parts?</h4>
+      <form name="metalParts" id="metalParts">
+        <button type="button" class="button5 btn btn-success btn-sm " value="ok" onclick="window.alert('Yet to add condition')">Yes</button>
+        <button type="button" class="button5 btn btn-danger btn-sm "  value="exit" onclick="checkAnotherCondition()">No</button>
+      </form>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    <div  class="tabcontent1" id="otherTwoCons">
+        <div class="card-deck">
+            <div class="card bg-secondary">
+              <div class="card-body text-center">
+        <h4 style ="color:rgb(35, 33, 36)">PLease select an option.</h4>
+          <form  name="case1form" id="otherTwoCons">
+              
+              <label class="checkbox">
+                <input type="checkbox" name="Exhaust" value ="Exhaust">Check Exhaust Nozzle for burn marks
+              </label>
+              <label class="checkbox">
+                  <input type="checkbox" name="fuel" value ="fuel">Check fuel leaks in combustion chamber
+                </label>
+              
+                    <button type="button" class="button5 btn btn-success btn-sm " value="ok" onclick="otherTwoCons()">Ok</button>
+                 
+                 
+                      <button type="button" class="button5 btn btn-danger btn-sm " value="exit">Exit</button>
+                    
+            </form>
+           </div>
+           </div>
+           </div>
+        </div>
+
+        <div class="tabcontent1" id="fuelLeaks">
+            <div class="card-deck">
+                <div class="card bg-secondary">
+                  <div class="card-body text-center">
+            <h4 style ="color:rgb(23, 22, 24)">Did you find any Fuel Leak?</h4>
+          <form name="fuelLeaks" id="fuelLeaks">
+            <button type="button" class="button5 btn btn-success btn-sm " value="ok" onclick="fuelLeakageCheck()">Yes</button>
+            <button type="button" class="button5 btn btn-danger btn-sm " value="exit" onclick="window.alert('Yet to add condition')">No</button>
+          </form>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div id="fuelLeakageCheck" class="tabcontent1">
+            <div class="card-deck">
+                <div class="card bg-secondary">
+                  <div class="card-body text-center">
+            <h4 style ="color:rgb(23, 22, 24)">Identify leakge in Fuel Pipe Coonection</h4>
+            <form  name="case1form" id="fuelLeakageCheck">
+                  <label class="checkbox">
+                      <input type="checkbox" name="Exhaust" value ="1-2">1-2
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="Exhaust" value ="3-4" checked>3-4
+                      </label>
+                      <label class="checkbox">
+                          <input type="checkbox" name="Exhaust" value ="5-6" checked>5-6
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="Exhaust" value ="7-8">7-8
+                          </label>
+                          <label class="checkbox">
+                              <input type="checkbox" name="Exhaust" value ="9-10">9-10
+                            </label>
+                    
+                          <button type="button" class="button5 btn btn-success btn-sm " value="ok" onclick="fuelLeakageCheckDone()">Ok</button>
+                      
+                       
+                            <button type="button" class="button5 btn btn-danger btn-sm " value="exit">Exit</button>
+                          
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+              </div>
+
+              <div class="tabcontent1" id="replacement">
+                  <div class="card-deck">
+                      <div class="card bg-secondary">
+                        <div class="card-body text-center">
+                  <h4 style ="color:rgb(23, 22, 24)">Replace the fuel seal with part# FR-23567<br/> 
+                    and provide the torque with the value of 50 Lbft as per EMM 72-34-34</h4>
+                <form name="replacement" id="replacement">
+                  <button type="button" class="button5 btn btn-success btn-sm "value="ok" onclick="actionTaken()">Yes</button>
+                  <button type="button" class="button5 btn btn-danger btn-sm " value="exit" onclick="window.alert('Yet to add condition')">No</button>
+                </form>
+                </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="tabcontent1" id="actionTaken">
+                  <div class="card-deck">
+                      <div class="card bg-secondary">
+                        <div class="card-body text-center">
+                <h4 style ="color:rgb(114, 72, 72)">
+                    Fuel leak found at Fuel pipe 3-4 and 5-6, <br/>
+                    Replace the fuel seal with part# FR-23567 as per EMM 72-34-34
+                </h4>
+                </div>
+                </div>
+                </div>
+              </div>
+            </div>
+        
+
+
+            <div class="scrollable">
+  <div id="Case2" class="tabcontent1">
+      <div class="card-deck">
+          <div class="card bg-secondary">
+            <div class="card-body text-center">
+      <h4 style ="color:rgb(35, 33, 36)">Check for the operation and power settings whether it is working or not?</h4> 
+      <form  name="case2form form-inline" id="case2form">
+              <button type="button" class="button5 btn btn-success btn-sm" value="ok" onclick="window.alert('Yet to add functionality')">Yes</button>
+              <button type="button" class="button5 btn btn-danger btn-sm "  value="No" onclick="mycase2Func()">No</button>
+              <button type="button" class="button5 btn btn-danger btn-sm "  value="Others" onclick="window.alert('Yet to add functionality')">Others</button>
+
+        </form>
+        </div>
+        </div>
+        </div>
+  </div>
+  
+  <div class="tabcontent1" id="restOfBoilers">
+      <div class="card-deck">
+          <div class="card bg-secondary">
+            <div class="card-body text-center">
+      <h4 style ="color:rgb(23, 22, 24)">Rest of boilers are in working conditions?</h4>
+    <form name="restOfBoilers" id="restOfBoilers">
+        <button type="button" class="button5 btn btn-success btn-sm" value="ok" onclick="itemDeferred()">Yes</button>
+        <button type="button" class="button5 btn btn-danger btn-sm "  value="No" onclick="window.alert('Yet to add functionality')">No</button>
+        <button type="button" class="button5 btn btn-danger btn-sm "  value="Others" onclick="window.alert('Yet to add functionality')">Others</button>
+    </form>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="itemDeferred" class="tabcontent1">
+      <div class="card-deck">
+          <div class="card bg-secondary">
+            <div class="card-body text-center">
+      <h4 style ="color:rgb(35, 33, 36)">Item can be deferred under MEL 21-56-44. shall we proceed?</h4> 
+      <form  name="case2form form-inline" id="itemDeferred">
+              <button type="button" class="button5 btn btn-success btn-sm" value="ok" onclick="itemDeferredWithRef()">Yes</button>
+              <button type="button" class="button5 btn btn-danger btn-sm "  value="No" onclick="window.alert('Yet to add functionality')">No</button>
+              <button type="button" class="button5 btn btn-danger btn-sm "  value="Others" onclick="window.alert('Yet to add functionality')">Others</button>
+
+        </form>
+        </div>
+        </div>
+        </div>
+  </div>
+
+  <div id="itemDeferredwithref" class="tabcontent1">
+      <div class="card-deck">
+          <div class="card bg-secondary">
+            <div class="card-body text-center">
+      <h4 style ="color:rgb(35, 33, 36)">Item can be deferred under MEL 21-56-44. shall we proceed?</h4> 
+      <form  name="case2form form-inline" id="itemDeferredwithref">
+              <button type="button" class="button5 btn btn-success btn-sm" value="ok" onclick="actionTakenCase2()">Yes</button>
+              <button type="button" class="button5 btn btn-danger btn-sm "  value="No" onclick="window.alert('Yet to add functionality')">No</button>
+              <button type="button" class="button5 btn btn-danger btn-sm "  value="Others" onclick="window.alert('Yet to add functionality')">Others</button>
+
+        </form>
+        </div>
+        </div>
+        </div>
+  </div>
+
+  <div class="tabcontent1" id="actionTakenCase2">
+      <div class="card-deck">
+          <div class="card bg-secondary">
+            <div class="card-body text-center">
+      <h4 style ="color:rgb(231, 108, 25)">
+          Rear location #2's boiler is deferred under MEL21-56044, <br/>
+          with MCC ref #LM-ORD-256
+      </h4>
+      </div>
+      </div>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="scrollable">
+    <div id="Case3" class="tabcontent1">
+        <div class="card-deck">
+            <div class="card bg-secondary">
+              <div class="card-body text-center">
+        <h4 style ="color:rgb(35, 33, 36)">Check for the operation  whether it is working or not?</h4> 
+        <form  name="case3form form-inline" id="case3form">
+                <button type="button" class="button5 btn btn-success btn-sm" value="ok" onclick="mycase3Func()">Yes</button>
+                <button type="button" class="button5 btn btn-danger btn-sm "  value="No" onclick="window.alert('Yet to add functionality')">No</button>
+  
+          </form>
+          </div>
+          </div>
+          </div>
+    </div>
+
+    <div id="itemIdentifiedWorking" class="tabcontent1">
+        <div class="card-deck">
+            <div class="card bg-secondary">
+              <div class="card-body text-center">
+        <h4 style ="color:rgb(35, 33, 36)">Item identified working. Proceed for resolution?</h4> 
+        <form  name="case3form form-inline" id="itemIdentifiedWorking">
+                <button type="button" class="button5 btn btn-success btn-sm" value="Ok" onclick="actionCase3()">Yes</button>
+                <button type="button" class="button5 btn btn-danger btn-sm "  value="NO" onclick="window.alert('Yet to add functionality')">No</button>
+  
+          </form>
+          </div>
+          </div>
+          </div>
+    </div>
+
+    <div class="tabcontent1" id="actionCase3">
+        <div class="card-deck">
+            <div class="card bg-secondary">
+              <div class="card-body text-center">
+        <h4 style ="color:rgb(240, 114, 30)">
+            Seat 24B is in working condition <br/>
+            Seat 24B is in working condition, Operation checked 
+        </h4>
+        </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+      
+    <div class="scrollable">
+      <div id="Case4" class="tabcontent1">
+          <div class="card-deck">
+              <div class="card bg-secondary">
+                <div class="card-body text-center">
+          <h4 style ="color:rgb(35, 33, 36)">Engine #1  exhaust temp is abnormal at cruse altitude</h4> 
+            <form  name="case4form form-inline" id="case4form">
+                
+                <label class="checkbox">
+                  <input type="checkbox" name="leakage" value ="landing_gear">Check if leakage is in Landing Gear
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="hydPipe" value="hyd_Pipe">Check if the leakage is in hyd Pipe line
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="wheelBrakes" value="wheel_Brakes"> Check if leakage is in wheel Brakes
+                </label>
+                
+                    <button type="button" class="button5 btn btn-success btn-sm" value="ok" onclick="mycase4Func()">Ok</button>
+                
+                  
+                      <button type="button" class="button5 btn btn-danger btn-sm "  value="others" onclick="window.alert('Not yet added')">Others
+                    
+              </form>
+              </div>
+              </div>
+              </div>
+            </div>
+
+            <div id="proceedResolution" class="tabcontent1">
+                <div class="card-deck">
+                    <div class="card bg-secondary">
+                      <div class="card-body text-center">
+                <h4 style ="color:rgb(35, 33, 36)">Item identified working. Proceed for resolution?</h4> 
+                <form  name="case4form form-inline" id="proceedResolution">
+                        <button type="button" class="button5 btn btn-success btn-sm" value="Ok" onclick="window.alert('Yet to add functionality')">Option1</button>
+                        <button type="button" class="button5 btn btn-danger btn-sm "  value="NO" onclick="changeHydPipe()">Option2</button>
+          
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+
+            </div>
+
+            <div id="changeHydPipe" class="tabcontent1">
+                <div class="card-deck">
+                    <div class="card bg-secondary">
+                      <div class="card-body text-center">
+                <h4 style ="color:rgb(35, 33, 36)">Change HYD pipe line with part #2378 with seal<br/>
+                90009 as per AMM # 32-00-34 and check for leakage if any?</h4> 
+                <form  name="case4form form-inline" id="changeHydPipe">
+                        <button type="button" class="button5 btn btn-success btn-sm" value="Ok" onclick="window.alert('Yet to add functionality')">Yes</button>
+                        <button type="button" class="button5 btn btn-danger btn-sm "  value="NO" onclick="activateSecondarySeal()">No</button>
+          
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+            </div>
+
+            <div id="activateSecondarySeal" class="tabcontent1">
+                <div class="card-deck">
+                    <div class="card bg-secondary">
+                      <div class="card-body text-center">
+                <h4 style ="color:rgb(35, 33, 36)">For option 1,  activiate the secondary seal  as per AMM 32-77-66 and check for any leakage?<br/>
+                  If leakage , then  redo the same process, if no leakage then proceed?</h4> 
+                <form  name="case4form form-inline" id="activateSecondarySeal">
+                        <button type="button" class="button5 btn btn-success btn-sm" value="Ok" onclick="checkLandingGear()">Yes</button>
+                        <button type="button" class="button5 btn btn-danger btn-sm "  value="NO" onclick="window.alert('Yet to add functionality')">No</button>
+          
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+            </div>
+
+            <div id="checkLandingGear" class="tabcontent1">
+                <div class="card-deck">
+                    <div class="card bg-secondary">
+                      <div class="card-body text-center">
+                <h4 style ="color:rgb(35, 33, 36)">Check for landing gear operation as per AMM 32-77-21 and see if any abnormal operation?</h4> 
+                <form  name="case4form form-inline" id="checkLandingGear">
+                        <button type="button" class="button5 btn btn-success btn-sm" value="Ok" onclick="window.alert('Yet to add functionality')"  >Yes</button>
+                        <button type="button" class="button5 btn btn-danger btn-sm "  value="NO" onclick="mainSealReplace()">No</button>
+          
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+            </div>
+
+            <div id="mainSealReplace" class="tabcontent1">
+                <div class="card-deck">
+                    <div class="card bg-secondary">
+                      <div class="card-body text-center">
+                <h4 style ="color:rgb(35, 33, 36)">Please note that since secondary seal is activated,<br/>
+                   Main seal to be replaced within 1500FH as per AMM 32-77-89,<br/>
+                   the defect cannot be closed and the defect will be deferred as per MCC ref -LM-LG-567, Proceed?</h4> 
+                <form  name="case4form form-inline" id="mainSealReplace">
+                        <button type="button" class="button5 btn btn-success btn-sm" value="Ok" onclick="window.alert('Yet to add functionality')"  >Yes</button>
+                        <button type="button" class="button5 btn btn-danger btn-sm "  value="NO" onclick="actionTakenCase4()">No</button>
+          
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+            </div>
+
+            <div id="actionTakenCase4" class="tabcontent1">
+                <div class="card-deck">
+                    <div class="card bg-secondary">
+                      <div class="card-body text-center">
+                <h4 style ="color:rgb(238, 141, 14)">Action Taken:
+                    Found hyd pipe line leakage, replace the pipe line with Part # 2378<br/> with seal # 90009 as per AMM 32-00-34
+                    Found Main seal leakage ,<br/> activated the secondary seal per AMM 32-77-66 ,<br/>
+                     Defect is deferred  under MCC ref LM-LG-567 and main seal to be replaced within 1500 FH<br/>
+                   </h4>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                 </div>
+  </div>
+</body>
+</html>
